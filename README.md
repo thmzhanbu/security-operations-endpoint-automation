@@ -10,7 +10,7 @@ An Ubuntu ARM64 lab demonstrating repeatable Wazuh agent deployment, service hea
 - **Monitoring coverage:** distinguish planned downtime from an endpoint expected online and produce a repeatable status report.
 - **Evidence and procedures:** retain test captures and document acceptance checks and known limitations.
 
-**Status:** completed personal lab demonstration. The results below are backed by screenshots and source files; this project does not represent work performed for Visa.
+**Status:** completed personal lab demonstration. The results below are backed by screenshots and source files.
 
 ## Demonstrated results
 
