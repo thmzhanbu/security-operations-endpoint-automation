@@ -1,6 +1,8 @@
-# Security Operations: Endpoint Lifecycle Automation with Wazuh and Ansible
+# Server Security Controls: Agent Lifecycle Automation and Coverage Monitoring
 
-An Ubuntu ARM64 lab demonstrating repeatable Wazuh agent deployment, service health checks, recovery, package rollback, and manager-side status reporting with Ansible and Python.
+**Deploy, maintain, troubleshoot, and verify Linux security agents using Wazuh, Ansible, Python, and Bash.**
+
+This Ubuntu ARM64 lab demonstrates the operational work behind reliable server security controls: repeatable agent onboarding, health checks, service recovery, controlled version maintenance, and manager-side coverage reporting.
 
 ## Security operations skills demonstrated
 
@@ -24,6 +26,19 @@ An Ubuntu ARM64 lab demonstrating repeatable Wazuh agent deployment, service hea
 | Package rollback | 4.14.8-1 → 4.14.7-1; service active and manager connected |
 | Version restoration | 4.14.8-1 installed; service active and manager connected |
 | Coverage summary | PASS for active ID 002; ATTENTION REQUIRED for simulated disconnected CSV input |
+
+## Relevance to server security controls roles
+
+| Responsibility | Demonstrated implementation |
+| --- | --- |
+| Deploy and maintain server security tools | Ansible installation, agent enrollment and repeat deployment with zero changes |
+| Monitor tool health and coverage | Endpoint systemd checks plus manager connection status; planned downtime documented separately |
+| Troubleshoot security agents | A controlled service outage detected by a failed assertion, followed by automated recovery and verification |
+| Perform version maintenance | Tested 4.14.8 → 4.14.7 → 4.14.8 package transition with service and manager checks |
+| Improve efficiency with scripting | Ansible playbooks and Python/Bash collection, CSV and status summary generation |
+| Maintain runbooks and status reports | Repeatable procedures, acceptance checks, screenshots and timestamped reports |
+
+[Role alignment and scope](docs/role-alignment.md) explains which responsibilities the evidence supports. For FIM investigation and AI-assisted alert triage, see the related project below.
 
 ## Selected evidence
 
