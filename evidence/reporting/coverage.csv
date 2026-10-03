@@ -1,0 +1,3 @@
+id,name,status,version,last_keep_alive_utc,note
+001,linux-agent-01,Disconnected,Wazuh v4.14.8,2026-10-03T07:37:41+00:00,Intentionally powered off for lab memory limits
+002,linux-agent-02,Active,Wazuh v4.14.8,2026-10-03T11:58:31+00:00,Expected online

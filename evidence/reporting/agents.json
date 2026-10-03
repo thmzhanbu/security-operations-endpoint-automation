@@ -1,0 +1,1 @@
+{"error":0,"data":[{"id":"000","name":"wazuh-server","ip":"127.0.0.1","status":"Active"},{"id":"001","name":"linux-agent-01","ip":"any","status":"Disconnected"},{"id":"002","name":"linux-agent-02","ip":"any","status":"Active"}]}

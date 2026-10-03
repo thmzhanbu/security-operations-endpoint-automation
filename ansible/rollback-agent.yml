@@ -1,0 +1,17 @@
+---
+- name: Test Wazuh agent package rollback
+  hosts: linux_agents
+  become: true
+  gather_facts: false
+  tasks:
+    - name: Install Wazuh agent 4.14.7
+      ansible.builtin.apt:
+        allow_downgrade: true
+        deb: https://packages.wazuh.com/4.x/apt/pool/main/w/wazuh-agent/wazuh-agent_4.14.7-1_arm64.deb
+
+    - name: Start and enable Wazuh agent
+      ansible.builtin.systemd_service:
+        name: wazuh-agent
+        daemon_reload: true
+        enabled: true
+        state: started

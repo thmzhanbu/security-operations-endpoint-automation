@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+*.bak
+.DS_Store
+*.tar.gz
+wazuh-install-files*
+*.key
+*.pem
+reporting/*.json
+reporting/*.csv
+reporting/summary.txt

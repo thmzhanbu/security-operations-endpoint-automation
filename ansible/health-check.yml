@@ -1,0 +1,24 @@
+---
+- name: Check Wazuh agent service health
+  hosts: linux_agents
+  gather_facts: false
+  become: true
+  tasks:
+
+    - name: Read agent service state
+      ansible.builtin.command: systemctl is-active wazuh-agent
+      register: agent_state
+      changed_when: false
+      failed_when: false
+
+    - name: Display service state
+      ansible.builtin.debug:
+        msg: "{{ inventory_hostname }}: {{ agent_state.stdout }}"
+
+    - name: Verify agent service is active
+      ansible.builtin.assert:
+        that:
+          - agent_state.rc == 0
+          - agent_state.stdout == 'active'
+        fail_msg: "Wazuh agent service is not active"
+        success_msg: "Wazuh agent service is active"

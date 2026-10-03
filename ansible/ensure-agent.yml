@@ -1,0 +1,11 @@
+---
+- name: Ensure Wazuh agent is running
+  hosts: linux_agents
+  gather_facts: false
+  become: true
+  tasks:
+    - name: Start and enable Wazuh agent
+      ansible.builtin.systemd_service:
+        name: wazuh-agent
+        state: started
+        enabled: true
